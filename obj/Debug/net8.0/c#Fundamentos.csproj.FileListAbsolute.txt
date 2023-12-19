@@ -1,0 +1,14 @@
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\bin\Debug\net8.0\c#Fundamentos.exe
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\bin\Debug\net8.0\c#Fundamentos.deps.json
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\bin\Debug\net8.0\c#Fundamentos.runtimeconfig.json
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\bin\Debug\net8.0\c#Fundamentos.dll
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\bin\Debug\net8.0\c#Fundamentos.pdb
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\obj\Debug\net8.0\c#Fundamentos.GeneratedMSBuildEditorConfig.editorconfig
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\obj\Debug\net8.0\c#Fundamentos.AssemblyInfoInputs.cache
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\obj\Debug\net8.0\c#Fundamentos.AssemblyInfo.cs
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\obj\Debug\net8.0\c#Fundamentos.csproj.CoreCompileInputs.cache
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\obj\Debug\net8.0\c#Fundamentos.dll
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\obj\Debug\net8.0\refint\c#Fundamentos.dll
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\obj\Debug\net8.0\c#Fundamentos.pdb
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\obj\Debug\net8.0\c#Fundamentos.genruntimeconfig.cache
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\obj\Debug\net8.0\ref\c#Fundamentos.dll
