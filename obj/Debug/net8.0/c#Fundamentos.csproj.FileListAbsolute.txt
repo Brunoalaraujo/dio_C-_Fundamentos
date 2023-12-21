@@ -27,3 +27,4 @@ C:\Users\brunoandradel.a\Desktop\C#Fundamentos\dio_C-_Fundamentos\obj\Debug\net8
 C:\Users\brunoandradel.a\Desktop\C#Fundamentos\dio_C-_Fundamentos\obj\Debug\net8.0\c#Fundamentos.pdb
 C:\Users\brunoandradel.a\Desktop\C#Fundamentos\dio_C-_Fundamentos\obj\Debug\net8.0\c#Fundamentos.genruntimeconfig.cache
 C:\Users\brunoandradel.a\Desktop\C#Fundamentos\dio_C-_Fundamentos\obj\Debug\net8.0\ref\c#Fundamentos.dll
+E:\DIO\BootAvanadeDecolaTech2024\c#Fundamentos\obj\Debug\net8.0\c#Fundamentos.sourcelink.json
