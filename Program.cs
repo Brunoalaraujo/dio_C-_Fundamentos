@@ -48,15 +48,19 @@ Console.WriteLine(e);
 // ---------- OPERADORES CONDICIONAIS ----------
 
 int quantidadeEmEstoque = 10;
-int quantidadeCompra = 41;
+int quantidadeCompra = 0;
 bool possivelVenda = quantidadeEmEstoque >= quantidadeCompra;
 
 Console.WriteLine($"Quantidade em estoque: {quantidadeEmEstoque}");
 Console.WriteLine($"Quantidade compra: {quantidadeCompra}");
-Console.WriteLine($"É possível realizar a venda?  {possivelVenda}");
+Console.WriteLine($"É possível realizar a venda? {possivelVenda}");
 
 
-if (possivelVenda)
+if (quantidadeCompra == 0)
+{
+    Console.WriteLine("Venda Inválida.");
+}
+else if (possivelVenda)
 {
     Console.WriteLine("Venda Realizada.");
 }
