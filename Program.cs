@@ -49,7 +49,7 @@ Console.WriteLine(e);
 
 int quantidadeEmEstoque = 10;
 int quantidadeCompra = 0;
-bool possivelVenda = quantidadeEmEstoque >= quantidadeCompra;
+bool possivelVenda = quantidadeCompra > 0 && quantidadeEmEstoque >= quantidadeCompra;
 
 Console.WriteLine($"Quantidade em estoque: {quantidadeEmEstoque}");
 Console.WriteLine($"Quantidade compra: {quantidadeCompra}");
@@ -67,4 +67,24 @@ else if (possivelVenda)
 else
 {
     Console.WriteLine($"Desculpe, no momentos só temos {quantidadeEmEstoque} unidades.");
+}
+
+
+
+Console.WriteLine("Digite uma letra");
+string? letra = Console.ReadLine();
+
+switch (letra)
+{
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+        Console.WriteLine("Vogal");
+        break;
+
+    default:
+        Console.WriteLine("Não é uma vogal");
+        break;
 }

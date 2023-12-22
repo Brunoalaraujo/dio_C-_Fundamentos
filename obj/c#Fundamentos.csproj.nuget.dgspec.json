@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brunoandradel.a\\Desktop\\C#Fundamentos\\dio_C-_Fundamentos\\c#Fundamentos.csproj": {}
+    "E:\\DIO\\BootAvanadeDecolaTech2024\\c#Fundamentos\\c#Fundamentos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brunoandradel.a\\Desktop\\C#Fundamentos\\dio_C-_Fundamentos\\c#Fundamentos.csproj": {
+    "E:\\DIO\\BootAvanadeDecolaTech2024\\c#Fundamentos\\c#Fundamentos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brunoandradel.a\\Desktop\\C#Fundamentos\\dio_C-_Fundamentos\\c#Fundamentos.csproj",
+        "projectUniqueName": "E:\\DIO\\BootAvanadeDecolaTech2024\\c#Fundamentos\\c#Fundamentos.csproj",
         "projectName": "c#Fundamentos",
-        "projectPath": "C:\\Users\\brunoandradel.a\\Desktop\\C#Fundamentos\\dio_C-_Fundamentos\\c#Fundamentos.csproj",
-        "packagesPath": "C:\\Users\\brunoandradel.a\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brunoandradel.a\\Desktop\\C#Fundamentos\\dio_C-_Fundamentos\\obj\\",
+        "projectPath": "E:\\DIO\\BootAvanadeDecolaTech2024\\c#Fundamentos\\c#Fundamentos.csproj",
+        "packagesPath": "C:\\Users\\55819\\.nuget\\packages\\",
+        "outputPath": "E:\\DIO\\BootAvanadeDecolaTech2024\\c#Fundamentos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\brunoandradel.a\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\55819\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
