@@ -136,43 +136,93 @@
 
 // Console.WriteLine($"Total da soma dos números digitados é: {soma}");
 
-// MENU INTERATIVO
+// ******************** MENU INTERATIVO ************************
 
-string opcao;
-bool exibirMenu = true;
+// string opcao;
+// bool exibirMenu = true;
 
-while (exibirMenu)
+// while (exibirMenu)
+// {
+//     // Console.Clear(); Limpa o console.
+//     Console.WriteLine("Digite a sua opção:");
+//     Console.WriteLine("1 - Cadastrar Cliente");
+//     Console.WriteLine("2 - Buscar Cliente");
+//     Console.WriteLine("3 - Apagar Cliente");
+//     Console.WriteLine("4 - Encerrar");
+
+//     opcao = Console.ReadLine();
+
+//     switch (opcao)
+//     {
+//         case "1":
+//             Console.WriteLine("Cadastro de Cliente");
+//             break;
+//         case "2":
+//             Console.WriteLine("Busca de Cliente");
+//             break;
+//         case "3":
+//             Console.WriteLine("Apagar Cliente");
+//             break;
+//         case "4":
+//             Console.WriteLine("Encerrar");
+//             exibirMenu = false;
+//             // Environment.Exit(0); //Encerrar o programa
+//             break;
+//         default:
+//             Console.WriteLine("Opção Inválida");
+//             break;
+//     }
+
+// }
+
+// Console.WriteLine("O programa se encerrou");
+
+
+// ---------- ARRAY E LISTAS ----------
+
+// int[] arrayInteiros = new int[4]; //Declaração de array de Inteiros. [3] = possui 3 elementos, obrigatório informar a capacidade máxima do array. 
+// arrayInteiros[0] = 72;
+// arrayInteiros[1] = 64;
+// arrayInteiros[2] = 50;
+// arrayInteiros[3] = 1;
+
+// Console.WriteLine("Percorrendo o Array com o FOR");
+// for (int contador = 0; contador < arrayInteiros.Length; contador++) //Percorrer array
+// {
+//     Console.WriteLine($"Posição Nº {contador} - {arrayInteiros[contador]}");
+// }
+
+
+// Console.WriteLine("Percorrendo o Array com o FOREACH"); //Não consegue pegar elementos pela posição sem manipulação externa.
+// int contadorForeach = 0;
+// foreach (int valor in arrayInteiros)
+// {
+//     Console.WriteLine($"Posição Nº {contadorForeach} - {valor}");
+//     contadorForeach++;
+// }
+
+
+// Array.Resize(ref arrayInteiros, arrayInteiros.Length * 2); // Serve para redimencionar o array criando uma cópia do array original. 1º pede a referência na memória de onde o array foi salvo, 2º Pede o Length do array e 3º A o peração para modificar o tamanho do array.
+
+// int[] arrayInteirosDobrado = new int[arrayInteiros.Length * 2];
+// Array.Copy(arrayInteiros, arrayInteirosDobrado, arrayInteiros.Length);
+
+List<string> listaStrings = new List<string>(); // Cira uma lista. lista não tem limitação de elementos. Uma lista é um array internamente.
+
+listaStrings.Add("SP"); // Adiciona um novo elemento a lista
+listaStrings.Add("PE");
+listaStrings.Add("MG");
+
+Console.WriteLine($"Percorrendo Lista com FOR:");
+for (int contador = 0; contador < listaStrings.Count; contador++) // FOR da lista usa COUNT.
 {
-    // Console.Clear(); Limpa o console.
-    Console.WriteLine("Digite a sua opção:");
-    Console.WriteLine("1 - Cadastrar Cliente");
-    Console.WriteLine("2 - Buscar Cliente");
-    Console.WriteLine("3 - Apagar Cliente");
-    Console.WriteLine("4 - Encerrar");
-
-    opcao = Console.ReadLine();
-
-    switch (opcao)
-    {
-        case "1":
-            Console.WriteLine("Cadastro de Cliente");
-            break;
-        case "2":
-            Console.WriteLine("Busca de Cliente");
-            break;
-        case "3":
-            Console.WriteLine("Apagar Cliente");
-            break;
-        case "4":
-            Console.WriteLine("Encerrar");
-            exibirMenu = false;
-            // Environment.Exit(0); //Encerrar o programa
-            break;
-        default:
-            Console.WriteLine("Opção Inválida");
-            break;
-    }
-
+    Console.WriteLine($"Posição Nº {contador} - {listaStrings[contador]}");
 }
 
-Console.WriteLine("O programa se encerrou");
+Console.WriteLine($"Percorrendo Lista com FOREACH:");
+int contadorForeach = 0;
+foreach (string item in listaStrings) // Prioridade no uso
+{
+    Console.WriteLine($"Posição Nº {contadorForeach} - {item}");
+    contadorForeach++;
+}
