@@ -90,14 +90,89 @@
 
 // ---------- OPERADORES ARITMÉTICOS E A CLASSE MATH ----------
 
-Calculadora calc = new Calculadora();
+// Calculadora calc = new Calculadora();
 
-calc.Somar(6, 5);
-calc.Subitrair(10, 5);
-calc.Multiplicar(5, 9);
-calc.Dividir(10, 2);
-calc.Potencia(3, 3);
-calc.Seno(30);
-calc.Coseno(30);
-calc.Tangente(30);
-calc.RaizQuadrada(9);
+// calc.Somar(6, 5);
+// calc.Subitrair(10, 5);
+// calc.Multiplicar(5, 9);
+// calc.Dividir(10, 2);
+// calc.Potencia(3, 3);
+// calc.Seno(30);
+// calc.Coseno(30);
+// calc.Tangente(30);
+// calc.RaizQuadrada(9);
+
+
+// ---------- ESTRUTURAS DE REPETIÇÃO ----------
+// int numero = 5;
+
+// for (int contador = 0; contador <= 10; contador++) //(Declaração da variável; Condição; Incremento da variável)
+// {
+//     Console.WriteLine($"{numero} x {contador} = {numero * contador}");
+// }
+
+
+// int numero2 = 8;
+// int contador2 = 0;
+
+// while (contador2 <= 10) //Enquanto a variável for verdadeira vai continuar o loop. cuidado com o loop infinito
+// {
+//     Console.WriteLine($"{contador2}º Execução: {numero2} x {contador2} = {numero2 * contador2}");
+//     contador2++; // Método para controle de variável.
+// }
+
+
+// int soma = 0, numero3 = 0;
+
+// do
+// {
+//     Console.WriteLine("Digite um número (0 para sair do programa):");
+//     numero3 = Convert.ToInt32(Console.ReadLine());
+
+//     soma += numero3;
+//     Console.WriteLine($"a soma até o momento é de: {soma}");
+
+// } while (numero3 != 0);
+
+// Console.WriteLine($"Total da soma dos números digitados é: {soma}");
+
+// MENU INTERATIVO
+
+string opcao;
+bool exibirMenu = true;
+
+while (exibirMenu)
+{
+    // Console.Clear(); Limpa o console.
+    Console.WriteLine("Digite a sua opção:");
+    Console.WriteLine("1 - Cadastrar Cliente");
+    Console.WriteLine("2 - Buscar Cliente");
+    Console.WriteLine("3 - Apagar Cliente");
+    Console.WriteLine("4 - Encerrar");
+
+    opcao = Console.ReadLine();
+
+    switch (opcao)
+    {
+        case "1":
+            Console.WriteLine("Cadastro de Cliente");
+            break;
+        case "2":
+            Console.WriteLine("Busca de Cliente");
+            break;
+        case "3":
+            Console.WriteLine("Apagar Cliente");
+            break;
+        case "4":
+            Console.WriteLine("Encerrar");
+            exibirMenu = false;
+            // Environment.Exit(0); //Encerrar o programa
+            break;
+        default:
+            Console.WriteLine("Opção Inválida");
+            break;
+    }
+
+}
+
+Console.WriteLine("O programa se encerrou");
