@@ -1,4 +1,5 @@
-﻿using c_Fundamentos.Models; //Importação do namespace da classe
+﻿using System.Globalization;
+using c_Fundamentos.Models; //Importação do namespace da classe
 
 // ---------- CLASSES ----------
 
@@ -13,6 +14,23 @@
 // // ---------- DateTime ----------
 
 // DateTime dataAtual = DateTime.Now; // DateTime Tipo para manipular datas. "DateTime.Now" Pega a data atual da máquina.
+
+// Console.WriteLine(dataAtual);
+// Console.WriteLine(dataAtual.ToShortDateString()); // Tipos de formatação padrão
+// Console.WriteLine(dataAtual.ToString("dd/MM/yyyy HH:mm")); // Formatação da data. Cuidado com a sintax, letras em CAPS LOOK fazem diferença na interpretação.
+
+// string dataString = "2022-13-17 18:00";
+
+// bool sucesso = DateTime.TryParseExact(dataString, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime data); // Convertemos uma string com uma data expecifica para o formato DateTime. Validando a data. Melhor formato para ralizar a conversão
+
+// if (sucesso)
+// {
+//     Console.WriteLine($"Conversão com sucesso! Data: {data}");
+// }
+// else
+// {
+//     Console.WriteLine($"{dataString} não é uma data válida");
+// }
 
 
 // // ---------- CHAMANDO CLASSE ----------
@@ -207,22 +225,43 @@
 // int[] arrayInteirosDobrado = new int[arrayInteiros.Length * 2];
 // Array.Copy(arrayInteiros, arrayInteirosDobrado, arrayInteiros.Length);
 
-List<string> listaStrings = new List<string>(); // Cira uma lista. lista não tem limitação de elementos. Uma lista é um array internamente.
+// List<string> listaStrings = new List<string>(); // Cira uma lista. lista não tem limitação de elementos. Uma lista é um array internamente.
 
-listaStrings.Add("SP"); // Adiciona um novo elemento a lista
-listaStrings.Add("PE");
-listaStrings.Add("MG");
+// listaStrings.Add("SP"); // Adiciona um novo elemento a lista
+// listaStrings.Add("PE");
+// listaStrings.Add("MG");
 
-Console.WriteLine($"Percorrendo Lista com FOR:");
-for (int contador = 0; contador < listaStrings.Count; contador++) // FOR da lista usa COUNT.
-{
-    Console.WriteLine($"Posição Nº {contador} - {listaStrings[contador]}");
-}
+// Console.WriteLine($"Percorrendo Lista com FOR:");
+// for (int contador = 0; contador < listaStrings.Count; contador++) // FOR da lista usa COUNT.
+// {
+//     Console.WriteLine($"Posição Nº {contador} - {listaStrings[contador]}");
+// }
 
-Console.WriteLine($"Percorrendo Lista com FOREACH:");
-int contadorForeach = 0;
-foreach (string item in listaStrings) // Prioridade no uso
-{
-    Console.WriteLine($"Posição Nº {contadorForeach} - {item}");
-    contadorForeach++;
-}
+// Console.WriteLine($"Percorrendo Lista com FOREACH:");
+// int contadorForeach = 0;
+// foreach (string item in listaStrings) // Prioridade no uso
+// {
+//     Console.WriteLine($"Posição Nº {contadorForeach} - {item}");
+//     contadorForeach++;
+// }
+
+// ---------- FORMATAÇÃO DE VALORES ----------
+
+// using System.Globalization; //Usado para modificar a localização do sistema.
+
+// CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR"); // Usado para definir a nova "localização da máquina".
+
+// decimal valorMonetario = 1582.40M; // Lmebrar de sempre colocar o M
+
+// Console.WriteLine($"{valorMonetario:C}"); // :C = formartar a string em valores monetários. Busca as informações do sistema para definir o formato da moeda.
+
+// Console.WriteLine(valorMonetario.ToString("C", CultureInfo.CreateSpecificCulture("en-US"))); // Usado para converter localmete a string, sem converter todo o programa
+
+// Console.WriteLine(valorMonetario.ToString("C3", CultureInfo.CreateSpecificCulture("en-US"))); // Colocando numero após o C podemos definir a quantidade de casas decimais que serão exibidas. Podemos Usar N3.
+
+// double porcentagem = .3421;
+// Console.WriteLine(porcentagem.ToString("P")); // Usado para representar porcentagem
+
+// int numero = 123456;
+// Console.WriteLine(numero.ToString("##-##-##")); // Formato personalizado 
+
