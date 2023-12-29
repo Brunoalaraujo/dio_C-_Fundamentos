@@ -265,3 +265,117 @@ using c_Fundamentos.Models; //Importação do namespace da classe
 // int numero = 123456;
 // Console.WriteLine(numero.ToString("##-##-##")); // Formato personalizado 
 
+
+// ---------- Exceções e Coleções (Filas, Pilhas e Dictionary) ----------
+
+// try // Método para tratar Exceções/Erros do programa.
+// {
+//     string[] linhas = File.ReadAllLines("Arquivos/arquivoLeitura.txt"); // File = função para trabalhar abertura de arquivos
+
+//     foreach (string linha in linhas)
+//     {
+//         Console.WriteLine(linha);
+//     }
+
+// }
+
+// catch (DirectoryNotFoundException ex) // Modelo de Exceção previsivel/específica.
+// {
+//     Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Caminho da pasta não encontrado. {ex.Message}");
+// }
+// catch (FileNotFoundException ex)
+// {
+//     Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Arquivo não encontrado. {ex.Message}"); // Podemos ter vários catch para tratar diferentes tipos de exceções.
+// }
+// catch (Exception ex)
+// {
+//     Console.WriteLine($"Ocorreu uma exceção genérica. {ex.Message}"); // Usamos a variável ex para acessar as informações da Exception.
+// }
+// finally // É executado independete se houve catch ou não
+// {
+//     Console.WriteLine("Chegou até aqui");
+// }
+
+// new ExemploExcecao().Metodo1();
+
+
+// Queue<int> fila = new Queue<int>(); // Filas são coleções onde os elementos são manipulados na mesma sequência que ingressaram nela
+
+// fila.Enqueue(2); // Adiciona elementos ao final da fila.
+// fila.Enqueue(4);
+// fila.Enqueue(6);
+// fila.Enqueue(8);
+
+// foreach (int item in fila)
+// {
+//     Console.WriteLine(item);
+// }
+
+// Console.WriteLine($"Removendo o elemento: {fila.Dequeue()}"); // Remove e retorna elementos na sequência da fila.
+
+// fila.Enqueue(10);
+
+// foreach (int item in fila)
+// {
+//     Console.WriteLine(item);
+// }
+
+
+// Stack<int> pilha = new Stack<int>(); // Pilhas são o oposto da fila, o último elemento a entrar será o primeiro a sair.
+
+// pilha.Push(4); // Adiciona um elemento ao topo da pilha
+// pilha.Push(6);
+// pilha.Push(8);
+// pilha.Push(10);
+
+// foreach (int item in pilha)
+// {
+//     Console.WriteLine(item);
+// }
+
+// Console.WriteLine($"Removendo o elemento do topo: {pilha.Pop()}"); // Remove e retorna um elemento do topo da pilha
+
+// pilha.Push(20);
+
+// foreach (int item in pilha)
+// {
+//     Console.WriteLine(item);
+// }
+
+
+Dictionary<string, string> estados = new Dictionary<string, string>(); // Dictionary é um conjunto de chave/valor. A chave deve ser única, igual ao conceito de id.
+
+estados.Add("PE", "Pernambuco"); // Adicionando conjunto chave/valor
+estados.Add("BA", "Bahia");
+estados.Add("MG", "Minas Gerais");
+
+foreach (KeyValuePair<string, string> item in estados) //KeyValuePair<string, string> forma de chamar o conjunto do Dictionary. Pode ser substituido para palavra "var"
+{
+    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+}
+
+Console.WriteLine("............"); // Só para facilitar visualização
+
+estados.Remove("BA"); // Para manipulação usamos apenas a chave.
+estados["PE"] = "Pernambuco - valor alterado"; // Não podemos alterar a chave (só removendo e adicionando novamente), mas podemos alterar o valor dela.
+
+foreach (var item in estados)
+{
+    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+}
+
+Console.WriteLine("............");
+
+string chave = "BA";
+Console.WriteLine($"Verificando o elemento: {chave}");
+
+if (estados.ContainsKey(chave)) // ContainsKey procura uma chave.
+{
+    Console.WriteLine($"Valor existente: {chave}");
+}
+else
+{
+    Console.WriteLine($"Valor não existe. É seguro adicionar a chave: {chave}");
+}
+
+Console.WriteLine(estados["MG"]); // Método para acessar um valor do Dictionary
