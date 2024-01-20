@@ -342,40 +342,55 @@ using c_Fundamentos.Models; //Importação do namespace da classe
 //     Console.WriteLine(item);
 // }
 
+// Dictionary<string, string> estados = new Dictionary<string, string>(); // Dictionary é um conjunto de chave/valor. A chave deve ser única, igual ao conceito de id.
 
-Dictionary<string, string> estados = new Dictionary<string, string>(); // Dictionary é um conjunto de chave/valor. A chave deve ser única, igual ao conceito de id.
+// estados.Add("PE", "Pernambuco"); // Adicionando conjunto chave/valor
+// estados.Add("BA", "Bahia");
+// estados.Add("MG", "Minas Gerais");
 
-estados.Add("PE", "Pernambuco"); // Adicionando conjunto chave/valor
-estados.Add("BA", "Bahia");
-estados.Add("MG", "Minas Gerais");
+// foreach (KeyValuePair<string, string> item in estados) //KeyValuePair<string, string> forma de chamar o conjunto do Dictionary. Pode ser substituido para palavra "var"
+// {
+//     Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+// }
 
-foreach (KeyValuePair<string, string> item in estados) //KeyValuePair<string, string> forma de chamar o conjunto do Dictionary. Pode ser substituido para palavra "var"
-{
-    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
-}
+// Console.WriteLine("............"); // Só para facilitar visualização
 
-Console.WriteLine("............"); // Só para facilitar visualização
+// estados.Remove("BA"); // Para manipulação usamos apenas a chave.
+// estados["PE"] = "Pernambuco - valor alterado"; // Não podemos alterar a chave (só removendo e adicionando novamente), mas podemos alterar o valor dela.
 
-estados.Remove("BA"); // Para manipulação usamos apenas a chave.
-estados["PE"] = "Pernambuco - valor alterado"; // Não podemos alterar a chave (só removendo e adicionando novamente), mas podemos alterar o valor dela.
+// foreach (var item in estados)
+// {
+//     Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+// }
 
-foreach (var item in estados)
-{
-    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
-}
+// Console.WriteLine("............");
 
-Console.WriteLine("............");
+// string chave = "BA";
+// Console.WriteLine($"Verificando o elemento: {chave}");
 
-string chave = "BA";
-Console.WriteLine($"Verificando o elemento: {chave}");
+// if (estados.ContainsKey(chave)) // ContainsKey procura uma chave.
+// {
+//     Console.WriteLine($"Valor existente: {chave}");
+// }
+// else
+// {
+//     Console.WriteLine($"Valor não existe. É seguro adicionar a chave: {chave}");
+// }
 
-if (estados.ContainsKey(chave)) // ContainsKey procura uma chave.
-{
-    Console.WriteLine($"Valor existente: {chave}");
-}
-else
-{
-    Console.WriteLine($"Valor não existe. É seguro adicionar a chave: {chave}");
-}
+// Console.WriteLine(estados["MG"]); // Método para acessar um valor do Dictionary
 
-Console.WriteLine(estados["MG"]); // Método para acessar um valor do Dictionary
+
+// ---------- Tuplas ----------
+
+(int Id, string Nome, string Sobrenome) tuplas = (1, "Fulano", "Teste"); //Tuplas é o nome da variável, pode ser qualquer coisa. Fornece sintax concisa para agrupar vários elementos de dados em uma estrutura de dados leve.
+
+Console.WriteLine($" Id: {tuplas.Id}");
+Console.WriteLine($" Nome: {tuplas.Nome}");
+Console.WriteLine($" Sobrenome: {tuplas.Sobrenome}");
+
+ValueTuple<int, string, string> outroExemploTupla = (2, "Beltrano", "Alfa");
+var outroExemploTuplaCreate = Tuple.Create(3, "Sem", "Nome"); //Dessas formas não conseguimos declarar o nome do elementos
+
+Console.WriteLine($" Id: {outroExemploTupla.Item1}");
+Console.WriteLine($" Nome: {outroExemploTupla.Item2}");
+Console.WriteLine($" Sobrenome: {outroExemploTupla.Item3}");
